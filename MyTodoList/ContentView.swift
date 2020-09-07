@@ -26,9 +26,9 @@ struct ContentView: View {
                 ForEach(todos, id:\.self) { todo in
                     LazyHStack {
                     Text("\(todo.title ?? "")")
-                    if todo.dateAdded != nil {
-                       Text("\(todo.dateAdded!)")
-                    }
+                        if todo.dateAdded != nil {
+                            Text("\(todo.dateAdded!)")
+                        }
                     }
                 }
             }
