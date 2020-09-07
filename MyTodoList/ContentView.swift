@@ -14,7 +14,9 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HStack {
-                TextField("Add a Todo", text: $todoString)
+                Text("Add a new Todo: ")
+                    .foregroundColor(.blue)
+                TextField("Add a Todo", text: $todoString) /// Add a Todo er placeholder
                 Button(action: {
                     self.addTodo()
                 }) {
