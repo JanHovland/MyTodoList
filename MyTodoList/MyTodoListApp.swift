@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
-struct MyTodoListApp: App {
+struct MyTodoList: App {
+    let context = DataStore.shared.persistentContainer.viewContext
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(\.managedObjectContext, context)
         }
     }
 }
+
